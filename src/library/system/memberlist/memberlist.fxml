@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="library.system.memberlist.MemberlistController">
+   <children>
+      <TableView fx:id="memberTable" prefHeight="500.0" prefWidth="790.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="Member ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="mobileColumn" prefWidth="75.0" text="Mobile" />
+            <TableColumn fx:id="addressColumn" prefWidth="75.0" text="Address" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem fx:id="editItem" mnemonicParsing="false" onAction="#loadMemberEditView" text="Edit" />
+                  <MenuItem fx:id="deleteItem" mnemonicParsing="false" onAction="#deleteMember" text="Delete" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+   </padding>
+</AnchorPane>
