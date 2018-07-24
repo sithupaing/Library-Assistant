@@ -28,8 +28,7 @@ public class LibrarySystem extends Application {
         try {
             Database db = Database.getInstance();
         } catch (SQLException e) {
-            MessageBox.showAndWaitErrorMessage("Connection Error", "Cannot connect to database.");
-            e.printStackTrace();
+            MessageBox.showAndWaitErrorMessage("Database Connection Error", "Cannot connect to database.");
         }
 
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
